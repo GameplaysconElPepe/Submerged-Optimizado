@@ -218,7 +218,8 @@ public sealed class SubmergedExileController(nint ptr) : ExileController(ptr)
 
             PlayerControl.LocalPlayer.SetKillTimer(GameManager.Instance.LogicOptions.GetKillCooldown());
             ShipStatus.Instance.EmergencyCooldown = GameManager.Instance.LogicOptions.GetEmergencyCooldown();
-
+            // Reset meeting controls before restoring the HUD. On newer Among Us
+            // versions the map button can remain visible but non-interactable otherwise.
             ControllerManager.Instance.CloseAndResetAll();
 
             HudManager.Instance.PlayerCam.Locked = false;
@@ -230,13 +231,6 @@ public sealed class SubmergedExileController(nint ptr) : ExileController(ptr)
             {
                 mapButton.enabled = true;
             }
-
-            PlayerControl.LocalPlayer.SetKillTimer(GameManager.Instance.LogicOptions.GetKillCooldown());
-            ShipStatus.Instance.EmergencyCooldown = GameManager.Instance.LogicOptions.GetEmergencyCooldown();
-            HudManager.Instance.PlayerCam.Locked = false;
-            HudManager.Instance.SetHudActive(true);
-            HudManager.Instance.ToggleMapButton(true);
-            ControllerManager.Instance.CloseAndResetAll();
         }
 
         Destroy(gameObject);
