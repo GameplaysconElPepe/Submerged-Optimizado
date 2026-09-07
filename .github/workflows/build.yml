@@ -49,19 +49,16 @@ jobs:
       - name: Download BepInEx
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          BEPINEX_VERSION="753"
-          curl --http1.1 -L --retry 5 --retry-delay 5 --retry-all-errors \
-            -o build_page.html \
-            https://builds.bepinex.dev/projects/bepinex_be
-          ARCHIVE_NAME_X64=$(grep -o "BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.${BEPINEX_VERSION}+[^\"']*.zip" build_page.html)
-          ARCHIVE_NAME_X86=$(grep -o "BepInEx-Unity.IL2CPP-win-x86-6.0.0-be.${BEPINEX_VERSION}+[^\"']*.zip" build_page.html)
-          curl --http1.1 -L --retry 5 --retry-delay 5 --retry-all-errors \
+          mkdir -p BepInEx
+
+          curl -L --retry 5 --retry-all-errors \
             -o BepInEx_x64.zip \
-            https://builds.bepinex.dev/projects/bepinex_be/${BEPINEX_VERSION}/${ARCHIVE_NAME_X64}
-          curl --http1.1 -L --retry 5 --retry-delay 5 --retry-all-errors \
+            "https://github.com/soyFault/Submerged/releases/download/deps/BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.753+0d275a4.zip"
+
+          curl -L --retry 5 --retry-all-errors \
             -o BepInEx_x86.zip \
-            https://builds.bepinex.dev/projects/bepinex_be/${BEPINEX_VERSION}/${ARCHIVE_NAME_X86}
-          mkdir BepInEx
+            "https://github.com/soyFault/Submerged/releases/download/deps/BepInEx-Unity.IL2CPP-win-x86-6.0.0-be.753+0d275a4.zip"
+
           unzip BepInEx_x64.zip -d BepInEx/x64
           unzip BepInEx_x86.zip -d BepInEx/x86
           chmod -R u+rwx BepInEx
