@@ -49,7 +49,7 @@ jobs:
       - name: Download BepInEx
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          BEPINEX_VERSION=$(grep '<PackageReference Include="BepInEx.Unity.IL2CPP"' Submerged/Submerged.csproj | sed 's/.*Version="6.0.0-be.\([^"]*\)".*/\1/')
+          BEPINEX_VERSION="753"
           curl -o build_page.html https://builds.bepinex.dev/projects/bepinex_be
           ARCHIVE_NAME_X64=$(grep -o "BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.${BEPINEX_VERSION}+[^\"']*.zip" build_page.html)
           ARCHIVE_NAME_X86=$(grep -o "BepInEx-Unity.IL2CPP-win-x86-6.0.0-be.${BEPINEX_VERSION}+[^\"']*.zip" build_page.html)
