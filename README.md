@@ -2,185 +2,185 @@
 
 # Submerged
 
-Submerged is a mod for Among Us which adds a new map into the game.
+Submerged es un mod para Among Us que agrega un nuevo mapa al juego.
 
-im not that good with github but enjoy the mira patch - twist
+## Características
 
-## Features
+* Múltiples pisos y ascensores
+* Más de 25 tareas personalizadas nuevas
+* 4 sabotajes nuevos
+* Nuevas mecánicas
+* Funciona en servidores oficiales
 
-- Multiple floors and elevators
-- Over 25 new custom tasks
-- 4 new sabotages
-- New mechanics
-- Works on official servers
-
-## Images and Videos
+## Imágenes y videos
 
 <details>
-<summary>Click to expand</summary>
+<summary>Haz clic para expandir</summary>
 
-### Map Guide
+### Guía del mapa
 
-![Upper Deck Layout](./.github/Images/Layout-UpperDeck.png)
-![Lower Deck Layout](./.github/Images/Layout-LowerDeck.png)
+![Diseño de la Cubierta Superior](./.github/Images/Layout-UpperDeck.png)
+![Diseño de la Cubierta Inferior](./.github/Images/Layout-LowerDeck.png)
 
-### Trailer
+### Tráiler
 
-[![Submerged Trailer](http://img.youtube.com/vi/gAX_mDOX4Pc/0.jpg)](http://www.youtube.com/watch?v=gAX_mDOX4Pc "Submerged Trailer")
+[![Tráiler de Submerged](http://img.youtube.com/vi/gAX_mDOX4Pc/0.jpg)](http://www.youtube.com/watch?v=gAX_mDOX4Pc "Tráiler de Submerged")
 
-[See the trailer on YouTube](http://www.youtube.com/watch?v=gAX_mDOX4Pc)
+[Ver el tráiler en YouTube](http://www.youtube.com/watch?v=gAX_mDOX4Pc)
 
-### Screenshots
+### Capturas de pantalla
 
-![Screenshot 1](./.github/Images/Screenshot-1.png)
-![Screenshot 2](./.github/Images/Screenshot-2.png)
-![Screenshot 3](./.github/Images/Screenshot-3.png)
-![Screenshot 4](./.github/Images/Screenshot-4.png)
-![Screenshot 5](./.github/Images/Screenshot-5.png)
-![Screenshot 6](./.github/Images/Screenshot-6.png)
-![Screenshot 7](./.github/Images/Screenshot-7.png)
-![Screenshot 8](./.github/Images/Screenshot-8.png)
+![Captura 1](./.github/Images/Screenshot-1.png)
+![Captura 2](./.github/Images/Screenshot-2.png)
+![Captura 3](./.github/Images/Screenshot-3.png)
+![Captura 4](./.github/Images/Screenshot-4.png)
+![Captura 5](./.github/Images/Screenshot-5.png)
+![Captura 6](./.github/Images/Screenshot-6.png)
+![Captura 7](./.github/Images/Screenshot-7.png)
+![Captura 8](./.github/Images/Screenshot-8.png)
 
 </details>
 
-# Releases
+# Versiones
 
-Submerged is compatible with desktop releases of Among Us. This includes Steam, Epic Games and itch.io. We do not support cracked versions of Among Us.
+Submerged es compatible con las versiones de escritorio de Among Us. Esto incluye Steam, Epic Games, itch.io y Microsoft Store. No ofrecemos soporte para versiones pirateadas de Among Us.
 
-The table below lists the most recent Submerged release for each Among Us version after `v2022.3.29` (for desktop platforms only). The changelog for each version can be found under the [Releases](https://github.com/SubmergedAmongUs/Submerged/releases) tab.
+La siguiente tabla muestra la versión más reciente del parche de Submerged para cada versión de Among Us (solo en plataformas de escritorio). Puedes encontrar el registro de cambios de cada versión en la pestaña de [Versiones](https://github.com/SubmergedAmongUs/Submerged/releases).
 
-|                                       Among Us Version                                        | Submerged Version |                                        Links                                        |
-|:---------------------------------------------------------------------------------------------:|:-----------------:|:-----------------------------------------------------------------------------------:|
-|                                    `v17.4.0`<br>`v17.3.0`                                     |   `TOU:M Patch`   | [Download](https://github.com/TwistAU/Submerged/releases/tag/Mira)                  | 
-|                                           `v17.1.0`                                           |   `v2025.11.20`   | [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2025.11.20/) | 
-|                                    `v17.0.1`<br>`v17.0.0`                                     |   `v2025.10.22`   | [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2025.10.22/) |
-|                 `v16.1.0`<br>`v16.0.5`<br>`v16.0.3`<br>`v16.0.2`<br>`v16.0.0`                 |    Unavailable    |                                          -                                          |
-|                 `v2024.11.26`<br>`v2024.10.29`<br>`v2024.9.4`<br>`v2024.8.13`                 |   `v2025.1.30`    | [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2025.1.30/)  |
-|                                         `v2024.6.18`                                          |    `v2024.8.1`    |  [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2024.8.1/)  |
-|                                  `v2024.6.4`<br>`v2024.3.5`                                   |   `v2024.3.25`    | [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2024.3.25/)  |
-|                                         `v2023.11.28`                                         |   `v2023.11.29`   | [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2023.11.29/) |
-|                                         `v2023.10.24`                                         |   `v2023.11.2`    | [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2023.11.2/)  |
-|                                 `v2023.7.12`<br>`v2023.7.11`                                  |    `v2023.8.2`    |  [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2023.8.2/)  |
-| `v2023.6.27`<br>`v2023.6.13`<br>`v2023.3.28`<br>`v2023.2.28`<br>`v2022.12.14`<br>`v2022.12.8` |    Unavailable    |                                          -                                          |
-|                                         `v2022.10.25`                                         |   `v2022.10.26`   | [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2022.10.26/) |
-|                                         `v2022.10.18`                                         |    Unavailable    |                                          -                                          |
-|                 `v2022.9.20`<br>`v2022.8.25`<br>`v2022.8.24`<br>`v2022.8.23`                  |   `v2022.8.26`    | [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2022.8.26/)  |
-|                                 `v2022.7.12`<br>`v2022.6.21`                                  |   `v2022.6.23`    | [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2022.6.23/)  |
-|                                 `v2022.4.19`<br>`v2022.3.29`                                  |   `v2022.6.12`    | [Download](https://github.com/SubmergedAmongUs/Submerged/releases/tag/v2022.6.12/)  |
+|   Versión de Among Us  | Versión de Submerged |                                Enlaces                                |
+| :--------------------: | :------------------: | :-------------------------------------------------------------------: |
+|        `v18.0.0`        |      `v1.0.3a`       | [Descargar](https://github.com/soyFault/Submerged/releases/tag/1.0.3a) |
+| `v17.4.0`<br>`v17.3.0` |       `v1.0.3`       | [Descargar](https://github.com/TwistAU/Submerged/releases/tag/1.0.3)  |
+| `v17.4.0`<br>`v17.3.0` |       `v1.0.2`       | [Descargar](https://github.com/TwistAU/Submerged/releases/tag/1.0.2)  |
+| `v17.4.0`<br>`v17.3.0` |       `v1.0.1`       | [Descargar](https://github.com/TwistAU/Submerged/releases/tag/1.0.1)  |
+| `v17.4.0`<br>`v17.3.0` |       `v1.0.0`       | [Descargar](https://github.com/TwistAU/Submerged/releases/tag/1.0.0)  |
 
-# Dependencies
+# Dependencias
 
-Submerged depends on the following mods and modding tools in order to function properly:
+Submerged depende de los siguientes mods y herramientas de modding para funcionar correctamente:
 
-| Mod                                                       | Version           |
-|-----------------------------------------------------------|-------------------|
-| [BepInEx](https://builds.bepinex.dev/projects/bepinex_be) | `v6.0.0-be.735`   |
-| [Reactor](https://github.com/nuclearpowered/reactor)      | `v2.5.0` or later |
+| Mod                                                       | Versión              |
+| --------------------------------------------------------- | -------------------- |
+| [BepInEx](https://builds.bepinex.dev/projects/bepinex_be) | `v6.0.0-be.735`      |
+| [Reactor](https://github.com/nuclearpowered/reactor)      | `v2.5.0` o posterior |
 
 > [!Note]
-> If you are using the Microsoft Store version of Among Us, you will need to download the `Unity (IL2CPP) for Windows (x64) games` version of BepInEx. Otherwise, you will need to download the `Unity (IL2CPP) for Windows (x86) games` version.
+> Si utilizas la versión de Among Us de Microsoft Store, tendrás que descargar la versión de BepInEx `Unity (IL2CPP) for Windows (x64) games`. De lo contrario, tendrás que descargar la versión `Unity (IL2CPP) for Windows (x86) games`.
 
-# Installation
+# Instalación
 
-**This mod is not compatible with mobile or console versions of Among Us.**
+**Este mod no es compatible con las versiones de Among Us para dispositivos móviles o consolas.**
 
-This mod is only guaranteed to work on Windows operating systems. We have no plans on ensuring compatibility with Linux-based operating systems or Mac.
+Solo se garantiza el funcionamiento de este mod en sistemas operativos Windows. No tenemos planes de garantizar compatibilidad con sistemas basados en Linux o con Mac.
 
-This mod has been tested and works with the Steam, Epic, itch.io and Microsoft Store versions of Among Us. We do not support or endorse using a pirated version of Among Us with Submerged.
+Este mod ha sido probado y funciona con las versiones de Among Us de Steam, Epic Games, itch.io y Microsoft Store. No ofrecemos soporte ni recomendamos utilizar una versión pirateada de Among Us con Submerged.
 
-## Installation Steps
+## Pasos de instalación
 
-1. Download the correct ZIP [release](#releases) based on your Among Us version.
-2. Navigate to your Among Us installation directory.
-3. Extract the downloaded files there. Ensure that the `BepInEx` folder is located in the same folder as the `Among Us.exe` file (Check screenshot below).
-   ![Folder Structure](./.github/Images/Folder-Structure.png)
+1. Descarga el ZIP de la [versión](#versiones) correspondiente a tu versión de Among Us.
 
-4. Run the game (Please note that the first launch might take some time).
+2. Ve al directorio de instalación de Among Us.
 
-Alternatively, if you are already using other mods or already have BepInEx installed, you can download the DLL file directly and place it in `BepInEx/plugins`.
+3. Extrae allí los archivos descargados. Asegúrate de que la carpeta `BepInEx` se encuentre en la misma carpeta que el archivo `Among Us.exe` (consulta la captura de pantalla de abajo).
+   ![Estructura de carpetas](./.github/Images/Folder-Structure.png)
 
-# Localization
+4. Ejecuta el juego (ten en cuenta que el primer inicio puede tardar un poco).
 
-Submerged is available in the languages listed below. If you would like to help translate Submerged to one of the languages listed below or want to correct a translation, please [open an issue](https://github.com/SubmergedAmongUs/Submerged/issues/new/choose/) or contact us at `submergedamongus@gmail.com`.
+Como alternativa, si ya utilizas otros mods o ya tienes BepInEx instalado, puedes descargar directamente el archivo DLL y colocarlo en `BepInEx/plugins`.
 
-| Language                | ❔  |              Status               |
-|-------------------------|:--:|:---------------------------------:|
-| English                 | ✅  |                 -                 |
-| Deutsch                 | 🟡 |       Partially Translated        |
-| Español                 | 🟡 |       Partially Translated        |
-| Français                | 🟡 |       Partially Translated        |
-| Italiano                | 🟡 |       Partially Translated        |
-| Nederlands              | 🟡 |       Partially Translated        |
-| Português (Brasil)      | 🟡 |       Partially Translated        |
-| Русский                 | 🟡 |       Partially Translated        |
-| 日本語                     | 🟡 |       Partially Translated        |
-| 简体中文                    | 🟡 |       Partially Translated        |
-| 繁體中文                    | 🟡 |       Partially Translated        |
-| Bisaya                  | ❌  |          Not Translated           |
-| Español (Latinoamérica) | ❌  | Not Translated<br>(Using Español) |
-| Gaeilge                 | ❌  |          Not Translated           |
-| Português               | ❌  |          Not Translated           |
-| 한국어                     | ❌  |          Not Translated           |
+# Localización
 
-# Compatibility
+Submerged está disponible en los idiomas que aparecen a continuación. Si deseas ayudar a traducir Submerged a alguno de los idiomas indicados o quieres corregir una traducción, puedes [abrir un issue](https://github.com/SubmergedAmongUs/Submerged/issues/new/choose/) o contactarnos en `submergedamongus@gmail.com`.
 
-This mod tries to touch as little as possible in order to be compatible with as many other mods as possible. However, if you encounter any issues while using Submerged alongside other mods, **please contact the developers of those mods first** before reaching out to us, as we will only investigate Submerged-related issues and not issues related to other mods.
+| Idioma                  |  ❔  |             Estado            |
+| ----------------------- | :-: | :---------------------------: |
+| English                 |  ✅  |               -               |
+| Deutsch                 |  🟡 |     Traducido parcialmente    |
+| Español                 |  ✅ |     Traducido totalmente      |
+| Français                |  🟡 |     Traducido parcialmente    |
+| Italiano                |  🟡 |     Traducido parcialmente    |
+| Nederlands              |  🟡 |     Traducido parcialmente    |
+| Português (Brasil)      |  🟡 |     Traducido parcialmente    |
+| Русский                 |  🟡 |     Traducido parcialmente    |
+| 日本語                     |  🟡 |     Traducido parcialmente    |
+| 简体中文                    |  🟡 |     Traducido parcialmente    |
+| 繁體中文                    |  🟡 |     Traducido parcialmente    |
+| Bisaya                  |  ❌  |          Sin traducir         |
+| Español (Latinoamérica) |  ❌  | Sin traducir<br>(Usa Español) |
+| Gaeilge                 |  ❌  |          Sin traducir         |
+| Português               |  ❌  |          Sin traducir         |
+| 한국어                     |  ❌  |          Sin traducir         |
 
-If you are a mod developer, the [FOR MOD DEVELOPERS.md](./.github/FOR%20MOD%20DEVELOPERS.md) file includes more information on how to make your mod compatible with Submerged.
+# Compatibilidad
 
-Submerged is compatible both with official servers and [Impostor](https://github.com/Impostor/Impostor) servers.
+Este mod intenta modificar lo menos posible para ser compatible con la mayor cantidad de mods posible. Sin embargo, si encuentras algún problema al utilizar Submerged junto con otros mods, **contacta primero a los desarrolladores de esos mods** antes de comunicarte con nosotros, ya que solo investigaremos problemas relacionados con Submerged y no problemas ocasionados por otros mods.
 
-# Contributing Guidelines
+Si eres desarrollador de mods, el archivo [FOR MOD DEVELOPERS.md](./.github/FOR%20MOD%20DEVELOPERS.md) contiene más información sobre cómo hacer que tu mod sea compatible con Submerged.
 
-Any and all contributions are welcome, but please keep in mind that Submerged is a finished project. We will not accept any new major features unless they are very cool 😎. If you want to add new features, please open an issue discussing your proposed changes before creating a pull request.
+Submerged es compatible tanto con los servidores oficiales como con los servidores de [Impostor](https://github.com/Impostor/Impostor).
 
-Additionally feel free to [open an issue](https://github.com/SubmergedAmongUs/Submerged/issues/new/choose/) if you have a feature request, want to report a bug, or basically anything else.
+# Guía para contribuir
 
-All pull request contributors are required to sign a [CLA](https://gist.github.com/Alexejhero/740d681de944b21948edd940a23f3ff1) (a bot will comment on opened pull requests with instructions).
+Cualquier contribución es bienvenida, pero ten en cuenta que Submerged es un proyecto terminado. No aceptaremos nuevas funciones importantes a menos que sean muy buenas 😎. Si quieres agregar nuevas funciones, abre primero un issue para discutir los cambios que propones antes de crear un pull request.
 
-# License
+También puedes [abrir un issue](https://github.com/SubmergedAmongUs/Submerged/issues/new/choose/) si tienes una sugerencia de función, quieres reportar un error o básicamente cualquier otra cosa.
 
-This mod is licensed under a custom license. Please check [LICENSE.md](LICENSE.md) for more information.
+Todos los colaboradores que envíen pull requests deben firmar un [CLA](https://gist.github.com/Alexejhero/740d681de944b21948edd940a23f3ff1) (un bot comentará en los pull requests abiertos con las instrucciones).
 
-_This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC._
+# Licencia
 
-For business inquiries, please contact us at `submergedamongus@gmail.com`.
+Este mod utiliza una licencia personalizada. Consulta [LICENSE.md](LICENSE.md) para obtener más información.
 
-# Credits
+*Este mod no está afiliado con Among Us ni con Innersloth LLC, y el contenido incluido en él no está respaldado ni patrocinado de ninguna forma por Innersloth LLC. Parte de los materiales aquí incluidos son propiedad de Innersloth LLC. © Innersloth LLC.*
 
-- Project Lead
-    - [5up](https://twitch.tv/5up/)
-- Developers
-    - [Alexejhero](https://github.com/Alexejhero/)
-    - [arctic_zeph](https://twitter.com/arctic_zeph/)
-    - [probablyadnf](https://github.com/simonkellly/)
-- Map Design
-    - [Axyn](https://twitter.com/itsAxyn/)
-    - [Blaustoise](https://twitter.com/blaustoise/)
-- Artists
-    - [colerobin_](https://twitter.com/colerobin_)
-    - [flipsonthemoon](https://twitter.com/flipsonthemoon/)
-    - [mushrium](https://twitter.com/mushrium/)
-    - [sabimrtn](https://twitter.com/sabimrtn/)
-    - [theinkpages](https://www.instagram.com/theinkpages/)
-    - [xiiyta](https://twitter.com/xiiyta/)
-- Contributors
-    - [cybershard](https://github.com/cybershard/)
-    - [js6pak](https://github.com/js6pak)
-    - [Sanae6](https://twitter.com/Sanae6k/)
-    - [XtraCube](https://github.com/xtracube/)
-- Additional Art
-    - [acronmd](https://twitter.com/acronmd/)
-    - [QueenPb](https://twitter.com/QueenTamandua/)
-- Translators
-    - Dekokiyo - 日本語
-    - ItsNiceCraft - Deutsch
-    - MissJukebox - Español
-    - Monid73 - Русский
-    - PENGUN - Italiano
-    - RevoLou - Português do Brasil
-    - RobinRMC - Nederlands
-    - SPRLC - Français
-    - ねろちゃん - 日本語
-    - 阿龍DragonTw - 繁體中文
-    - 黑客Hecker - 简体中文
+Para consultas comerciales, contáctanos en `submergedamongus@gmail.com`.
+
+# Créditos
+
+* Líder del proyecto
+
+  * [5up](https://twitch.tv/5up/)
+* Desarrolladores
+
+  * [Alexejhero](https://github.com/Alexejhero/)
+  * [arctic_zeph](https://twitter.com/arctic_zeph/)
+  * [probablyadnf](https://github.com/simonkellly/)
+* Diseño del mapa
+
+  * [Axyn](https://twitter.com/itsAxyn/)
+  * [Blaustoise](https://twitter.com/blaustoise/)
+* Artistas
+
+  * [colerobin_](https://twitter.com/colerobin_)
+  * [flipsonthemoon](https://twitter.com/flipsonthemoon/)
+  * [mushrium](https://twitter.com/mushrium/)
+  * [sabimrtn](https://twitter.com/sabimrtn/)
+  * [theinkpages](https://www.instagram.com/theinkpages/)
+  * [xiiyta](https://twitter.com/xiiyta/)
+* Colaboradores
+
+  * [cybershard](https://github.com/cybershard/)
+  * [js6pak](https://github.com/js6pak)
+  * [Sanae6](https://twitter.com/Sanae6k/)
+  * [XtraCube](https://github.com/xtracube/)
+* Arte adicional
+
+  * [acronmd](https://twitter.com/acronmd/)
+  * [QueenPb](https://twitter.com/QueenTamandua/)
+* Traductores
+
+  * Dekokiyo - 日本語
+  * ItsNiceCraft - Deutsch
+  * MissJukebox - Español
+  * Monid73 - Русский
+  * PENGUN - Italiano
+  * RevoLou - Português do Brasil
+  * RobinRMC - Nederlands
+  * SPRLC - Français
+  * ねろちゃん - 日本語
+  * 阿龍DragonTw - 繁體中文
+  * 黑客Hecker - 简体中文
+* Compatibilidad (este fork)
+
+  * [Fault](https://www.youtube.com/@NoSoyFault)
+  * [Gameplaysconelpepe](https://www.youtube.com/@elpepejuega33)
