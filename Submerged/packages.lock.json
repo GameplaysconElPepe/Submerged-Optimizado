@@ -16,7 +16,7 @@
       },
       "BepInEx.IL2CPP.MSBuild": {
         "type": "Direct",
-        "requested": "[2.1.0-rc.1, )",
+        "requested": "[2.1.0-dev-6, )",
         "resolved": "2.1.0-rc.1",
         "contentHash": "WI/7TbJwWl5P4B6UXGtKI1VMe6fA6h3fcbp3ZjJKqOBQ5MJfDMmeVB4fb+RW1tUQdxnlSWV3Ul62PHFyTqp4PA=="
       },
