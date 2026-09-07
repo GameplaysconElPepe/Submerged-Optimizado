@@ -14,12 +14,6 @@
         "resolved": "1.1.0",
         "contentHash": "/7Nmc1EA9lYlGBiyz6qPAaHvlcJHEjFZ1RFpGX+8EBj3GrgoX5kbpnZusuSHoOlLx0l+CnzKuQNE54B8UaGPyw=="
       },
-      "BepInEx.IL2CPP.MSBuild": {
-        "type": "Direct",
-        "requested": "[2.1.0-dev-6, )",
-        "resolved": "2.1.0-rc.1",
-        "contentHash": "WI/7TbJwWl5P4B6UXGtKI1VMe6fA6h3fcbp3ZjJKqOBQ5MJfDMmeVB4fb+RW1tUQdxnlSWV3Ul62PHFyTqp4PA=="
-      },
       "BepInEx.Unity.IL2CPP": {
         "type": "Direct",
         "requested": "[6.0.0-be.753, )",
@@ -48,6 +42,12 @@
         "requested": "[1.25.0, )",
         "resolved": "1.25.0",
         "contentHash": "jOclVb2PVoOdKafuzt3bJ3BHkbjsfuAx+60yqP4zCAhlNa1rwn1Jt05qrmqJgmBY42S08hXbps9KA6QR2Z7aOA=="
+      },
+      "NextBepLoader.BepInEx.IL2CPP.MSBuild": {
+        "type": "Direct",
+        "requested": "[2.1.0-dev-6, )",
+        "resolved": "2.1.0-dev-6",
+        "contentHash": "BNT8Pz5ICowz91eCqDrFIgpGpafUDT+ePzS5bIp2MoDIgR1TOpkJhHAB98F9vQti8UHQu5HvcSnxWBp6VfXkiA=="
       },
       "Reactor": {
         "type": "Direct",
