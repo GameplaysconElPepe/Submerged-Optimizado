@@ -24,7 +24,14 @@ public static class ChangeFloorButtonPatches
     [HarmonyPostfix]
     public static void HudUpdatePatch(HudManager __instance)
     {
-        if (!SubmarineStatus.instance || Minigame.Instance || !GameManager.Instance || !GameManager.Instance.IsNormal() || MeetingHud.Instance || !PlayerControl.LocalPlayer || !PlayerControl.LocalPlayer.Data.IsDead)
+        if (!SubmarineStatus.instance ||
+            Minigame.Instance ||
+            !GameManager.Instance ||
+            !GameManager.Instance.IsNormal() ||
+            MeetingHud.Instance ||
+            !PlayerControl.LocalPlayer ||
+            PlayerControl.LocalPlayer.Data == null ||
+            !PlayerControl.LocalPlayer.Data.IsDead)
         {
             if (_floorButton) _floorButton.SetActive(false);
 
@@ -55,6 +62,13 @@ public static class ChangeFloorButtonPatches
         }
 
         _floorButton.SetActive(true);
+
+        PassiveButton floorButtonBehavior = _floorButton.GetComponent<PassiveButton>();
+        if (floorButtonBehavior)
+        {
+            floorButtonBehavior.enabled = true;
+        }
+
         SetButtonStyle(PlayerControl.LocalPlayer.transform.position.y <= -5);
     }
 
