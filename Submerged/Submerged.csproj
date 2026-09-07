@@ -1,8 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <VersionPrefix>1.0.3</VersionPrefix>
-        <VersionSuffix>beta1</VersionSuffix>
+        <VersionPrefix>1.0.4</VersionPrefix>
         <Authors>Submerged Team</Authors>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/soyFault/Submerged/</RepositoryUrl>
