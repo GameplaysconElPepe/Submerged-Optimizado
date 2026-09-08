@@ -49,7 +49,7 @@ La siguiente tabla muestra la versión más reciente del parche de Submerged par
 
 |   Versión de Among Us  | Versión de Submerged |                                Enlaces                                |
 | :--------------------: | :------------------: | :-------------------------------------------------------------------: |
-|        `v18.0.0`        |      `v1.0.3a`       | [Descargar](https://github.com/soyFault/Submerged/releases/tag/1.0.3a) |
+|        `v18.0.0`        |      `v1.0.4`       | [Descargar](https://github.com/soyFault/Submerged/releases/tag/1.0.4) |
 | `v17.4.0`<br>`v17.3.0` |       `v1.0.3`       | [Descargar](https://github.com/TwistAU/Submerged/releases/tag/1.0.3)  |
 | `v17.4.0`<br>`v17.3.0` |       `v1.0.2`       | [Descargar](https://github.com/TwistAU/Submerged/releases/tag/1.0.2)  |
 | `v17.4.0`<br>`v17.3.0` |       `v1.0.1`       | [Descargar](https://github.com/TwistAU/Submerged/releases/tag/1.0.1)  |
