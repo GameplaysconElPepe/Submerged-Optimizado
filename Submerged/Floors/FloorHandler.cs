@@ -18,7 +18,7 @@ public sealed class FloorHandler(nint ptr) : MonoBehaviour(ptr)
 
     public static FloorHandler LocalPlayer => GetFloorHandler(PlayerControl.LocalPlayer);
 
-    private static readonly Dictionary<int, FloorHandler> _hashCodeToFloorHandler = new();
+    private static readonly Dictionary<nint, FloorHandler> _pointerToFloorHandler = new();
     public int lastSid;
 
     public bool onUpper;
@@ -32,6 +32,7 @@ public sealed class FloorHandler(nint ptr) : MonoBehaviour(ptr)
 
     private PlayerControl _player;
     private Transform _transform;
+    private byte _playerId;
 
     private PlayerControl Player
     {
@@ -43,6 +44,7 @@ public sealed class FloorHandler(nint ptr) : MonoBehaviour(ptr)
     {
         Player = GetComponent<PlayerControl>();
         _transform = Player.transform;
+        _playerId = Player.PlayerId;
 
         if (Player.GetComponent<DummyBehaviour>().enabled)
         {
@@ -76,8 +78,6 @@ public sealed class FloorHandler(nint ptr) : MonoBehaviour(ptr)
         UpdateFloor();
         Vector3 position = _transform.position;
         bool changed = false;
-        Vector3 camOffset = _followerCamTransform.position - position;
-        Vector3 camCenterOffset = _followerCam.centerPosition - (Vector2) position;
 
         if (position.y > FLOOR_CUTOFF)
         {
@@ -111,6 +111,11 @@ public sealed class FloorHandler(nint ptr) : MonoBehaviour(ptr)
 
             if (Player.AmOwner)
             {
+                // Camera offsets are only needed by the local player; reading them here avoids two
+                // interop reads per run for every other player.
+                Vector3 camOffset = _followerCamTransform.position - position;
+                Vector3 camCenterOffset = _followerCam.centerPosition - (Vector2) position;
+
                 if (!Player.inVent)
                 {
                     _followerCam.centerPosition = position + camCenterOffset;
@@ -138,12 +143,14 @@ public sealed class FloorHandler(nint ptr) : MonoBehaviour(ptr)
     {
         if (!comp) return null;
 
-        int hashCode = comp.GetHashCode();
+        // Keying by the native pointer avoids an interop GetHashCode call; this runs for every
+        // player's CustomNetworkTransform.FixedUpdate, every physics frame.
+        nint pointer = comp.Pointer;
 
-        if (_hashCodeToFloorHandler.TryGetValue(hashCode, out FloorHandler handler)) return handler;
+        if (_pointerToFloorHandler.TryGetValue(pointer, out FloorHandler handler)) return handler;
 
         handler = comp.gameObject.EnsureComponent<FloorHandler>();
-        _hashCodeToFloorHandler.Add(hashCode, handler);
+        _pointerToFloorHandler.Add(pointer, handler);
 
         return handler;
     }
@@ -170,9 +177,11 @@ public sealed class FloorHandler(nint ptr) : MonoBehaviour(ptr)
 
     public void UpdateFloor()
     {
-        SubmarinePlayerFloorSystem.Instance.playerFloorStates.TryGetValue(Player.PlayerId, out onUpper);
+        SubmarinePlayerFloorSystem.Instance.playerFloorStates.TryGetValue(_playerId, out onUpper);
 
-        if (Player.PlayerId == PlayerControl.LocalPlayer.PlayerId)
+        // AmOwner is equivalent to PlayerId == LocalPlayer.PlayerId but avoids two interop reads
+        // (this runs twice per frame for every player)
+        if (_player.AmOwner)
         {
             if (_overrideOnUpper != null)
             {
@@ -205,10 +214,10 @@ public sealed class FloorHandler(nint ptr) : MonoBehaviour(ptr)
 
     private static void CleanCache()
     {
-        Span<int> hashCodesToRemove = stackalloc int[_hashCodeToFloorHandler.Count];
+        Span<nint> pointersToRemove = stackalloc nint[_pointerToFloorHandler.Count];
         int count = 0;
 
-        foreach ((int hashCode, FloorHandler floorHandler) in _hashCodeToFloorHandler)
+        foreach ((nint pointer, FloorHandler floorHandler) in _pointerToFloorHandler)
         {
             try
             {
@@ -219,12 +228,12 @@ public sealed class FloorHandler(nint ptr) : MonoBehaviour(ptr)
                 // ignore
             }
 
-            hashCodesToRemove[count++] = hashCode;
+            pointersToRemove[count++] = pointer;
         }
 
         for (int i = 0; i < count; i++)
         {
-            _hashCodeToFloorHandler.Remove(hashCodesToRemove[i]);
+            _pointerToFloorHandler.Remove(pointersToRemove[i]);
         }
     }
 
