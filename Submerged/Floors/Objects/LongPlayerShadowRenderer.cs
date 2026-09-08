@@ -28,16 +28,28 @@ public class LongPlayerShadowRenderer(nint ptr) : PlayerShadowRenderer(ptr)
         switch (targetRenderer.name)
         {
             case "LongNeck":
-                shadowRenderer.size = new Vector2(targetRenderer.size.x, 1.1f);
+            {
+                Vector2 size = new(targetRenderer.size.x, 1.1f);
+                shadowRenderer.size = size;
+                TrackShadowSize(size);
                 break;
+            }
 
             case "ForegroundNeck":
-                shadowRenderer.size = new Vector2(targetRenderer.size.x, 1.7f);
+            {
+                Vector2 size = new(targetRenderer.size.x, 1.7f);
+                shadowRenderer.size = size;
+                TrackShadowSize(size);
                 break;
+            }
 
             case "LongHead":
-                shadowRenderer.transform.localPosition = new Vector3(shadowRenderer.transform.localPosition.x, body.neckSprite.transform.localPosition.y + 2.79f, shadowRenderer.transform.localPosition.z);
+            {
+                Vector3 position = new(shadowRenderer.transform.localPosition.x, body.neckSprite.transform.localPosition.y + 2.79f, shadowRenderer.transform.localPosition.z);
+                shadowRenderer.transform.localPosition = position;
+                TrackShadowLocalPosition(position);
                 break;
+            }
         }
     }
 }
