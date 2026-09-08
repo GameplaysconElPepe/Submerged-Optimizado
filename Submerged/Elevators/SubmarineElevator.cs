@@ -35,6 +35,11 @@ public sealed class SubmarineElevator(nint ptr) : MonoBehaviour(ptr)
         // Total - 5.6s
     ];
 
+    private bool? _idleAppliedFloor;
+    private nint _lowerMeshPointer;
+    private nint _upperMeshPointer;
+    private float _lowerLastMeshAmount = float.NaN;
+    private float _upperLastMeshAmount = float.NaN;
     private int _colorCount;
     private AudioSource _dingSound;
     private Material _lowerBlackoutMat;
@@ -67,6 +72,8 @@ public sealed class SubmarineElevator(nint ptr) : MonoBehaviour(ptr)
 
         _lowerMesh = lowerElevatorFilter.Value.mesh;
         _upperMesh = upperElevatorFilter.Value.mesh;
+        _lowerMeshPointer = _lowerMesh.Pointer;
+        _upperMeshPointer = _upperMesh.Pointer;
 
         _originalUVs = _lowerMesh.uv;
         _newUVs = _originalUVs;
@@ -85,6 +92,11 @@ public sealed class SubmarineElevator(nint ptr) : MonoBehaviour(ptr)
     {
         if (!system.moving)
         {
+            // While idle, this whole block only depends on upperDeckIsTargetFloor and used to be
+            // re-applied every frame (including mesh UV re-uploads). Apply it on state change only.
+            if (_idleAppliedFloor == system.upperDeckIsTargetFloor) return;
+            _idleAppliedFloor = system.upperDeckIsTargetFloor;
+
             lowerElevator.Value.material.SetTexture(_mainTex, system.upperDeckIsTargetFloor ? elevatorWithoutDoorL1 : elevatorWithoutDoorL2);
             upperElevator.Value.material.SetTexture(_mainTex, system.upperDeckIsTargetFloor ? elevatorWithoutDoorL1 : elevatorWithoutDoorL2);
 
@@ -107,10 +119,11 @@ public sealed class SubmarineElevator(nint ptr) : MonoBehaviour(ptr)
             SetMeshMovement(lowerElevator, _lowerMesh, system.upperDeckIsTargetFloor ? -1 : 0);
             SetMeshMovement(upperElevator, _upperMesh, !system.upperDeckIsTargetFloor ? 1 : 0);
 
-            _movingSound.Stop();
+            if (_movingSound.isPlaying) _movingSound.Stop();
         }
         else
         {
+            _idleAppliedFloor = null;
             lowerLight.Value.enabled = system.upperDeckIsTargetFloor;
             upperLight.Value.enabled = !system.upperDeckIsTargetFloor;
 
@@ -524,6 +537,16 @@ public sealed class SubmarineElevator(nint ptr) : MonoBehaviour(ptr)
 
     public void SetMeshMovement(MeshRenderer rend, Mesh mesh, float amount)
     {
+        // The same amount is often re-applied on consecutive frames (idle states, fade stages);
+        // rewriting identical UVs and colors would re-upload the mesh to the GPU for nothing.
+        bool isLowerMesh = mesh.Pointer == _lowerMeshPointer;
+
+        float lastAmount = isLowerMesh ? _lowerLastMeshAmount : _upperLastMeshAmount;
+        if (lastAmount.Equals(amount)) return;
+
+        if (isLowerMesh) _lowerLastMeshAmount = amount;
+        else _upperLastMeshAmount = amount;
+
         float alpha = 1 - (Mathf.Clamp(Mathf.Abs(amount), 0.25f, 0.75f) - 0.25f) / 0.5f;
         Color alphaColor = new(1, 1, 1, alpha);
 
